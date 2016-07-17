@@ -34,37 +34,37 @@
                 android:id="@+id/popMovies"
                 style="@style/ButtonAppearance"
                 android:text="@string/popularMovies"
-                android:onClick="toastButton1" />
+                android:onClick="onClickHandler" />
 
             <Button
                 android:id="@+id/stockHawk"
                 style="@style/ButtonAppearance"
                 android:text="@string/stockHawk"
-                android:onClick="toastButton2" />
+                android:onClick="onClickHandler" />
 
             <Button
                 android:id="@+id/buildBigger"
                 style="@style/ButtonAppearance"
                 android:text="@string/buildItBigger"
-                android:onClick="toastButton3" />
+                android:onClick="onClickHandler" />
 
             <Button
                 android:id="@+id/makeAppMaterial"
                 style="@style/ButtonAppearance"
                 android:text="@string/makeAppMaterial"
-                android:onClick="toastButton4" />
+                android:onClick="onClickHandler" />
 
             <Button
                 android:id="@+id/goUbiquitous"
                 style="@style/ButtonAppearance"
                 android:text="@string/goUbiquitous"
-                android:onClick="toastButton5" />
+                android:onClick="onClickHandler" />
 
             <Button
                 android:id="@+id/capstone"
                 style="@style/ButtonAppearance"
                 android:text="@string/capstone"
-                android:onClick="toastButton6" />
+                android:onClick="onClickHandler" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

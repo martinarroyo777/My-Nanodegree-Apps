@@ -1,10 +1,9 @@
 package com.example.mmorales.myappportfolio;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.*;
-import android.content.Context;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,85 +15,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-        First Toast Button - Popular Movies App
+        -- Click handler that displays Toasts describing each project------
+        (Will eventually be replaced with Intents to open the project itself, once built)
      */
 
-    public void toastButton1(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Popular Movies App!";
-        int duration = Toast.LENGTH_SHORT;
+    public void onClickHandler(View view) {
+        int buttonId = view.getId(); // Get the id of the button clicked in the view
+        // Determine which Toast to present based on the button clicked
+        switch(buttonId){
+            case R.id.popMovies:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                            "This button will launch my Popular Movies App!",
+                             Toast.LENGTH_SHORT ).show();
+                break;
+            case R.id.stockHawk:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                        "This button will launch my Stock Hawk App!",
+                        Toast.LENGTH_SHORT ).show();
+                break;
+            case R.id.buildBigger:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                        "This button will launch my Build It Bigger App!",
+                        Toast.LENGTH_SHORT ).show();
+                break;
+            case R.id.makeAppMaterial:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                        "This button will launch my Make Your App Material App!",
+                        Toast.LENGTH_SHORT ).show();
+                break;
+            case R.id.goUbiquitous:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                        "This button will launch my Go Ubiquitous App!",
+                        Toast.LENGTH_SHORT ).show();
+                break;
+            case R.id.capstone:
+                new Toast(getApplicationContext()).makeText(getApplicationContext(),
+                        "This button will launch my Capstone App!",
+                        Toast.LENGTH_SHORT ).show();
+                break;
+        }
 
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
 
     }
 
-    /*
-        Second Toast Button - Stock Hawk App
-     */
-    public void toastButton2(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Stock Hawk App!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-    }
-
-    /*
-        Third Toast Button - Build it Bigger App
-     */
-
-    public void toastButton3(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Build It Bigger App!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-    }
-
-    /*
-        Fourth Toast Button - Make Your App Material App
-     */
-
-    public void toastButton4(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Make Your App Material App!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-    }
-
-    /*
-        Fifth Toast Button - Go Ubiquitous App
-     */
-
-    public void toastButton5(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Go Ubiquitous App!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-    }
-
-    /*
-        Sixth Toast Button - Capstone App
-     */
-
-    public void toastButton6(View view) {
-        Context context = getApplicationContext();
-        CharSequence text = "This button will launch my Capstone App!";
-        int duration = Toast.LENGTH_SHORT;
-
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
-
-    }
 }
